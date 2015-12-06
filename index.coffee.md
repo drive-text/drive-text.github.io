@@ -59,12 +59,17 @@ This is called when the Google client API script has finished loading.
 	window.google_client_onload = ->
 		console.log 'Checking if already authorised.'
 
+		scope = 'https://www.googleapis.com/auth/drive'
+		#scope = 'https://www.googleapis.com/auth/drive.file'
+		#scope = 'https://www.googleapis.com/auth/drive.metadata.readonly'
+
+		if location.hostname == 'drive-text.github.io'
+			scope += ' https://www.googleapis.com/auth/drive.install'
+
 		auth =
 			client_id: '929534383010-hui1c2g21lphi0o9tg4rblmlqb1v4fo8.apps.googleusercontent.com'
 			immediate: true
-			scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.install'
-			#scope: 'https://www.googleapis.com/auth/drive.file'
-			#scope: 'https://www.googleapis.com/auth/drive.metadata.readonly'
+			scope: scope
 
 		auth_good = ->
 			console.log 'Loading Google Drive API.'
