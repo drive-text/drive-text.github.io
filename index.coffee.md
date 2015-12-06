@@ -62,7 +62,7 @@ This is called when the Google client API script has finished loading.
 		auth =
 			client_id: '929534383010-hui1c2g21lphi0o9tg4rblmlqb1v4fo8.apps.googleusercontent.com'
 			immediate: true
-			scope: 'https://www.googleapis.com/auth/drive'
+			scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.install'
 			#scope: 'https://www.googleapis.com/auth/drive.file'
 			#scope: 'https://www.googleapis.com/auth/drive.metadata.readonly'
 
