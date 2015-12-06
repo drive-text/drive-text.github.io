@@ -168,6 +168,14 @@ Callback receives an object with the following fields:
 		document.getElementById 'file_content'
 		.value = content
 
+Lame hack to toggle the editor/loader display after the content is loaded.
+
+		wrapper = document.getElementById 'editor_wrapper'
+		wrapper.className = wrapper.className.replace 'hidden', ''
+
+		progress_bar = document.getElementById 'loader_wrapper'
+		progress_bar.className += ' hidden'
+
 
 ## Update file
 
