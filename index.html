@@ -1,0 +1,27 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta content="width=device-width" name="viewport">
+		<title>Google Drive text editor</title>
+		<style>
+			body, html {
+				margin: 0;
+				padding: 0;
+			}
+
+			#file_content {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="editor">
+			<textarea id="file_content"></textarea>
+		</div>
+		<div class="controls">
+			<button id="save_button">Save</button>
+		</div>
+		<script src="./index.js"></script>
+		<script src="https://apis.google.com/js/client.js?onload=google_client_onload" type="text/javascript"></script>
+	</body>
+</html>
